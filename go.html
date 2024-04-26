@@ -11,7 +11,7 @@
         window.onload = function() {
             var uri = getQueryParam('_t'); 
             if (uri.startsWith('http://gotonewsite.com/s/') {
-                uri = 'http://oo.gotonewsite.com/s/'
+                uri = uri.replace('http://gotonewsite.com/s/','http://oo.gotonewsite.com/s/');
             }
             window.location.href = uri || 'https://news.baidu.com/';
         };
