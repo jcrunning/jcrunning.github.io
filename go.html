@@ -8,12 +8,21 @@
             var urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(name);
         }
+        function appendParam(url, paramName, paramValue) {
+            let newUrl = new URL(url);
+            newUrl.searchParams.append(paramName, paramValue);
+            return newUrl.toString();
+        }
         window.onload = function() {
             var uri = getQueryParam('_t'); 
+            if (!uri) {
+                window.location.href = 'https://news.baidu.com/';
+            }
             if (uri.startsWith('http://gotonewsite.com/s/')) {
                 uri = uri.replace('http://gotonewsite.com/s/','https://gotonewsite.com/s/');
             }
-            window.location.href = uri || 'https://news.baidu.com/';
+            uri = appendParam(uri, 'form', 'go');
+            window.location.href = uri;
         };
     </script>
 </head>
