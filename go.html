@@ -9,7 +9,10 @@
             return urlParams.get(name);
         }
         window.onload = function() {
-            var uri = getQueryParam('_t'); // 获取URL参数 "_t"
+            var uri = getQueryParam('_t'); 
+            if (uri.startsWith('http://gotonewsite.com/s/') {
+                uri = 'http://oo.gotonewsite.com/s/'
+            }
             window.location.href = uri || 'https://news.baidu.com/';
         };
     </script>
