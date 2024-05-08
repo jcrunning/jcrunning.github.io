@@ -18,9 +18,6 @@
             if (!uri) {
                 window.location.href = 'https://news.baidu.com/';
             }
-            if (uri.startsWith('http://gotonewsite.com/s/')) {
-                uri = uri.replace('http://gotonewsite.com/s/','https://gotonewsite.com/s/');
-            }
             uri = appendParam(uri, '_f', 'gitee.io');
             window.location.href = uri;
         };
