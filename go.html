@@ -19,7 +19,7 @@
                 window.location.href = 'https://news.baidu.com/';
                 return;
             }
-            var parsedUrl = new URL(url);
+            var parsedUrl = new URL(uri);
             var hostname = parsedUrl.hostname;
 
             if (!hostname.toLowerCase().endsWith(".com")) {
