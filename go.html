@@ -17,6 +17,14 @@
             var uri = getQueryParam('_t'); 
             if (!uri) {
                 window.location.href = 'https://news.baidu.com/';
+                return;
+            }
+            var parsedUrl = new URL(url);
+            var hostname = parsedUrl.hostname;
+
+            if (!hostname.toLowerCase().endsWith(".com")) {
+                window.location.href = 'https://news.baidu.com/';
+                return;
             }
             uri = appendParam(uri, '_f', 'gitee.io');
             window.location.href = uri;
